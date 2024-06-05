@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRbar</title>
+    <link rel="stylesheet" href="qrstyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a class="active" href="index.html">Home</a>
+        <a href="barcode/barindex.html">Barcode</a>
+        <a href="#about">About</a>
+        <div class="text">
+            <h4><p>Developed By:</p></h4>
+            <p>Al-Mahmud Samiul</p>
+            <p>&copy; QRbar. All rights reserved.</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <select id="input-type">
+            <option value="url">URL</option>
+            <option value="text">Text</option>
+        </select>
+        <div id="input-container">
+            <input type="text" id="input-value" placeholder="Enter URL or Text here" />
+        </div>
+        <label for="qr-size">QR Code Size: <span id="size-value">200</span>px</label>
+        <input type="range" id="qr-size" min="100" max="500" value="200"/>
+        <label for="qr-version">QR Code Version:</label>
+        <select id="qr-version">
+            <option value="1">Version 1</option>
+            <option value="2">Version 2</option>
+            <option value="5">Version 5</option>
+            <option value="8">Version 8</option>
+            <option value="10">Version 10</option>
+            <option value="15">Version 15</option>
+            <option value="20">Version 20</option>
+            <option value="25">Version 25</option>
+            <option value="30">Version 30</option>
+            <option value="35">Version 35</option>
+            <option value="40">Version 40</option>
+        </select>
+        <button id="generate-btn">Generate QR Code</button>
+        <div id="qr-code"></div>
+        <div class="download-btn">
+           <button id="download-btn" style="display:none;">Download QR Code</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-text">
+            <h4><p>Developed By:</p></h4>
+            <p>Al-Mahmud Samiul</p>
+            <p>&copy; QRbar. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="qrscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRbar</title>
+    <link rel="stylesheet" type="text/css" href="barstyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a class="active" href="barindex.html">Home</a>
+        <a href="../index.html">QR code</a>
+        <a href="#about">About</a>
+        <div class="text">
+            <h4><p>Developed By:</p></h4>
+            <p>Al-Mahmud Samiul</p>
+            <p>&copy; QRbar. All rights reserved.</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Barcode Generator</h1>
+        <div>
+            <label for="textInput"></label>
+            <input type="text" id="textInput" placeholder="Enter text">
+            <div>
+                <label for="barcodeSize">Barcode Size:</label>
+                <select id="barcodeSize">
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xtrlarge">Extra-Large</option>
+                </select>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="displayValue" name="displayValue">
+                <label for="displayValue">Show text/numbers/symbols in barcode</label>
+            </div>            
+            <button id="generate-btn">Generate Barcode</button>
+            <div id="barcode-container"></div>
+            <div class="download-btn">
+                <button id="download-btn" style="display:none;">Download Barcode</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-text">
+            <h4><p>Developed By:</p></h4>
+            <p>Al-Mahmud Samiul</p>
+            <p>&copy; QRbar. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <script src="barscript.js"></script>
+</body>
+</html>

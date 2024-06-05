@@ -1,0 +1,256 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background: linear-gradient(to bottom, #000000, #ffffff);
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px; 
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+select, input, textarea {
+    width: 80%;
+    font-family: cursive;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    min-width: 450px; 
+}
+
+input {
+    min-width: 450px;
+    font-family: cursive;
+}
+
+button {
+    padding: 10px 20px;
+    font-family: cursive;
+    border: none;
+    border-radius: 5px;
+    background-color: #007afc;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+#barcodeSize {
+    width: 80%;
+    color: rgb(3, 46, 46);
+}
+
+/* Container for the checkbox and label */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* Hide the default checkbox */
+.checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkbox-container label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+/* Custom checkbox appearance */
+.checkbox-container label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #007afc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom checkbox appearance when checked */
+.checkbox-container input[type="checkbox"]:checked + label:before {
+    background-color: #0fa523;
+    border-color: #0056b3;
+}
+
+/* Custom checkmark */
+.checkbox-container label:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    width: 8px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+
+.download-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.footer-text {
+    display: none;
+}
+
+.text {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    margin-left: 8px;
+    font-size: smaller;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 200px;
+    background-color: #050505;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: rgb(253, 250, 250);
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #5aa4bb;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+  
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    select, input, textarea, label {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+        min-width: 300px; 
+    }
+    
+    input {
+        min-width: 300px;
+    }
+
+    .footer-text {
+        display: block;
+        position: relative;
+        color: rgb(5, 5, 5);
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .sidebar {
+        width: 100%;
+        top: 0;
+        height: 50px;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+
+    .container {
+        margin-top: 30px;
+    }
+}

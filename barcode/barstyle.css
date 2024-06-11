@@ -1,16 +1,15 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
     align-items: center;
-    background: linear-gradient(to bottom, #000000, #ffffff);
+    background: linear-gradient(to bottom, #facf96, #fab801);
     font-family: cursive;
     margin: 0;
     padding: 0;
 }
 
-.menu {
+.menu{
     position: absolute;
     top: 0;
     right: 0;
@@ -19,10 +18,18 @@ body {
 
 .container {
     text-align: center;
-    background-color: #fff;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(0, 0, 0, 0.3)
+    );
+    background-size: 30px;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
     width: 90%;
     max-width: 600px;
     box-sizing: border-box;
@@ -78,21 +85,18 @@ label {
     color: rgb(3, 46, 46);
 }
 
-/* Container for the checkbox and label */
 .checkbox-container {
     display: flex;
     align-items: center;
     margin: 10px 0;
 }
 
-/* Hide the default checkbox */
 .checkbox-container input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-/* Create a custom checkbox */
 .checkbox-container label {
     position: relative;
     padding-left: 35px;
@@ -101,7 +105,6 @@ label {
     user-select: none;
 }
 
-/* Custom checkbox appearance */
 .checkbox-container label:before {
     content: "";
     position: absolute;
@@ -115,13 +118,11 @@ label {
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Custom checkbox appearance when checked */
 .checkbox-container input[type="checkbox"]:checked + label:before {
     background-color: #0fa523;
     border-color: #0056b3;
 }
 
-/* Custom checkmark */
 .checkbox-container label:after {
     content: "";
     position: absolute;
@@ -136,11 +137,9 @@ label {
     transition: opacity 0.2s ease;
 }
 
-/* Show the checkmark when checked */
 .checkbox-container input[type="checkbox"]:checked + label:after {
     opacity: 1;
 }
-
 
 .download-btn {
     display: flex;
@@ -226,7 +225,7 @@ label {
         color: rgb(5, 5, 5);
         width: 100%;
         text-align: center;
-        padding: 30px 0;
+        padding: 100px 0;
     }
 
     .text {
@@ -237,7 +236,7 @@ label {
         width: 100%;
         top: 0;
         height: 50px;
-        position: fixed;
+        position: relative;
         margin: 0;
         padding: 0;
     }
